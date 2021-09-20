@@ -56,38 +56,38 @@ Unter [diesem Link](https://docs.github.com/en/free-pro-team@latest/github/setti
 
 Zum Bearbeiten und zur Abgabe der Aufgaben müsst ihr den über GitHub bereitgestellten Source-Code über die Konsole verwalten.  
 
-Damit ihr den Code lokal bearbeiten könnt, benötigt ihr die URL eures Repos. Diese erhaltet ihr auf der GitHub-Webseite:
+Damit ihr den Code lokal bearbeiten könnt, müsst ihr das Repo klonen. Ihr benötigt dafür zunächst einen SSH Key. Diesen müsst ihr zu eurem GitHub Account hinzufügen. Eine ausführliche Erklärung zur Generierung eines SSH Keys und dem Hinzufügen des SSH Keys zu eurem GitHub Account findet ihr [hier](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
+
+Anschließend benötigt ihr die URL eures Repos. Diese erhaltet ihr auf der GitHub-Webseite:
 
 ![](images/git/step1.png)
 
-Mit Hilfe der URL könnt ihr das Repository über eure Konsole mit `git clone <url>` herunterladen.
-
-![](images/git/step2.png)
+Mit Hilfe der URL könnt ihr das Repository über eure Konsole mit `git clone <url>` herunterladen. Sofern ihr bei der Generierung des SSH Keys eine Passphrase festgelegt habt, müsst ihr diese nun eingeben.
 
 Anschließend wechselt ihr in das heruntergeladene Repository mit `cd <repo-name>`.
 
-![](images/git/step3.png)
+![](images/git/step2.png)
 
 Nachdem ihr die Aufgabe bearbeitet habt, könnt ihr mit `git status` alle editierten Dateien sehen.
 
-![](/images/git/step4.png)
+![](/images/git/step3.png)
 
 Die Dateien, die ihr abgeben wollt, müssen nun jeweils mit `git add <file-path>` selektiert werden.
 
-![](images/git/step5.png)
+![](images/git/step4.png)
 
 Zum Überprüfen, ob alle abzugebenen Dateien ausgewählt/hinzugefügt wurden, kann erneut `git status` aufgerufen werden.
 Alle in grün geschriebenen Dateien wurden zur Abgabe selektiert.
 
-![](images/git/step6.png)
+![](images/git/step5.png)
 
 Vor dem Upload müssen die Dateien "committed" werden - `git commit -m "<commit-message>"`.
 
-![](images/git/step7.png)
+![](images/git/step6.png)
 
 Die Abgabe / Der Upload der Bearbeitung erfolgt zu guter Letzt mit `git push`.
 
-![](images/git/step8.png)
+![](images/git/step7.png)
 
   <br/>
 
