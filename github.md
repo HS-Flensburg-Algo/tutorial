@@ -12,7 +12,7 @@
 
 ## Installation von Git unter Windows
 
-Unter https://git-scm.com/download/win findet ihr den Installer. Der Download sollte automatisch starten.
+Unter https://git-scm.com/download/win findet ihr den _Installer_. Der Download sollte automatisch starten.
 
 Im Installationsprozess muss nur eine Sache verändert werden.
 
@@ -24,9 +24,9 @@ Ihr könnt entweder euren Lieblingseditor aus der liste auswählen oder den Punk
 
 Ab da kann den Standardeinstellungen gefolgt werden, am Ende auf `Install` klicken.
 
-Nach der erfolgreichen Installation nur noch kurz das Häkchen bei `View Release Notes` entfernen und mit `Next` den Installer beenden.
+Nach der erfolgreichen Installation nur noch kurz das Häkchen bei `View Release Notes` entfernen und mit `Next` den _Installer_ beenden.
 
-Nun öffnet ihr den Ordner, in dem ihr die Bearbeitung der Aufgaben vornehmen wollt, mit dem Windows Explorer.
+Nun öffnet ihr mit dem Windows Explorer den Ordner, in dem ihr die Bearbeitung der Aufgaben vornehmen wollt.
 
 Mit einem Rechtsklick in dem Ordner könnt ihr nun im Kontextmenü `Git Bash Here` auswählen, es öffnet sich ein Konsolenfenster.
 
@@ -47,7 +47,7 @@ git config --global user.name "Jan Christiansen"
 git config --global user.email "jan.christiansen@hs-flensburg.de"
 ```
 
-Unter [diesem Link](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#setting-your-commit-email-address-in-git) findet ihr bei Interesse noch eine alternative Erklärung und zusätzliche Informationen zu diesen Informationen und GitHub.
+Unter [diesem Link](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#setting-your-commit-email-address-in-git) findet ihr bei Interesse noch eine alternative Erklärung und zusätzliche Informationen zu dieser Konfiguration und GitHub.
 
 <br/>
 
@@ -56,13 +56,13 @@ Unter [diesem Link](https://docs.github.com/en/free-pro-team@latest/github/setti
 
 Zum Bearbeiten und zur Abgabe der Aufgaben müsst ihr den über GitHub bereitgestellten Source-Code über die Konsole verwalten.  
 
-Damit ihr den Code lokal bearbeiten könnt, müsst ihr das Repo klonen. Ihr benötigt dafür zunächst einen SSH Key. Diesen müsst ihr zu eurem GitHub Account hinzufügen. Eine ausführliche Erklärung zur Generierung eines SSH Keys und dem Hinzufügen des SSH Keys zu eurem GitHub Account findet ihr [hier](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
+Damit ihr den Code lokal bearbeiten könnt, müsst ihr das Repo klonen. Ihr benötigt dafür zunächst einen _SSH Key_. Diesen müsst ihr zu eurem GitHub-Account hinzufügen. Eine ausführliche Erklärung zur Generierung eines _SSH Keys_ und dem Hinzufügen des _SSH Keys_ zu eurem GitHub-Account findet ihr [hier](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
 
 Anschließend benötigt ihr die URL eures Repos. Diese erhaltet ihr auf der GitHub-Webseite:
 
 ![](images/git/step1.png)
 
-Mit Hilfe der URL könnt ihr das Repository über eure Konsole mit `git clone <url>` herunterladen. Sofern ihr bei der Generierung des SSH Keys eine Passphrase festgelegt habt, müsst ihr diese nun eingeben.
+Mit Hilfe der URL könnt ihr das Repository über eure Konsole mit `git clone <url>` herunterladen. Sofern ihr bei der Generierung des _SSH Keys_ eine _Passphrase_ festgelegt habt, müsst ihr diese nun eingeben.
 
 Anschließend wechselt ihr in das heruntergeladene Repository mit `cd <repo-name>`.
 
@@ -97,7 +97,7 @@ Die Abgabe / Der Upload der Bearbeitung erfolgt zu guter Letzt mit `git push`.
 
 GitHub ist so konfiguriert, dass automatisch geprüft wird, dass ihr euch an bestimmte Programmierregeln halten müsst. Diese automatische Überprüfung wird reviewdog genannt.
 
-Diese Anmerkungen findet ihr im Feedback Pull-Request.
+Diese Anmerkungen findet ihr in einem _Pull Request_ mit dem Namen Feedback.
 
 ![](images/reviewdog/step1.png)
 
@@ -105,7 +105,7 @@ Nun solltet sich diese Seite öffnen. Das rote Kreuz zeigt an, dass noch Fehler 
 
 ![](images/reviewdog/step2.png)
 
-Wenn ihr den Feedback-Pull Request gewählt habt, könnt ihr oben den Reiter "Files changed" auswählen.
+Wenn ihr den _Pull Request_ gewählt habt, könnt ihr oben den Reiter "Files changed" auswählen.
 
 ![](images/reviewdog/step3.png)
 
