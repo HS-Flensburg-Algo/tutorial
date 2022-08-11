@@ -1,16 +1,17 @@
-[Zurück](index.md)
+---
+layout: post
+title: "GitHub"
+---
 
-# GitHub
+1. [GitHub über die Konsole bedienen](#github-über-die-konsole-bedienen)
 
-[GitHub über die Konsole bedienen](#github-über-die-konsole-bedienen)
-
-[Feedback und reviewdog](#feedback-und-reviewdog)
+2. [Feedback und reviewdog](#feedback-und-reviewdog)
 
 <br/>
 
-# GitHub über die Konsole bedienen
+## GitHub über die Konsole bedienen
 
-## Installation von Git unter Windows
+### Installation von Git unter Windows
 
 Unter https://git-scm.com/download/win findet ihr den _Installer_. Der Download sollte automatisch starten.
 
@@ -33,7 +34,7 @@ Mit einem Rechtsklick in dem Ordner könnt ihr nun im Kontextmenü `Git Bash Her
 <br/>
 
 
-## Konfiguration des Nutzers
+### Konfiguration des Nutzers
 
 Damit Git euch die Commits, die ihr durchführt, zuordnen kann, solltet ihr einmal euren Namen und eure Mail-Adresse setzen.
 Dazu müsst ihr in der Konsole die folgenden beiden Befehle eingeben und jeweils mit der _Eingabe_-Taste bestätigen.
@@ -52,7 +53,7 @@ Unter [diesem Link](https://docs.github.com/en/free-pro-team@latest/github/setti
 <br/>
 
 
-## Git über die Konsole bedienen
+### Git über die Konsole bedienen
 
 Zum Bearbeiten und zur Abgabe der Aufgaben müsst ihr den über GitHub bereitgestellten Source-Code über die Konsole verwalten.  
 
@@ -91,9 +92,9 @@ Die Abgabe / Der Upload der Bearbeitung erfolgt zu guter Letzt mit `git push`.
 
   <br/>
 
-# Feedback und reviewdog
+## Feedback und reviewdog
 
-## Anmerkungen lesen
+### Anmerkungen lesen
 
 GitHub ist so konfiguriert, dass automatisch geprüft wird, dass ihr euch an bestimmte Programmierregeln halten müsst. Diese automatische Überprüfung wird reviewdog genannt.
 
