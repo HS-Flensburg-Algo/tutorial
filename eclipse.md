@@ -1,18 +1,19 @@
-[Zurück](index.md)
+---
+layout: post
+title: "Eclipse"
+---
 
-# Eclipse
+1. [Import eines Projektes](#import-eines-projektes)
 
-[Import eines Projektes](#import-eines-projektes)
+2. [Ausführen von JUnit-Testfällen](#ausführen-von-junit-testfällen)
 
-[Ausführen von JUnit-Testfällen](#ausführen-von-junit-testfällen)
+3. [Refactorings](#refactorings)
 
-[Refactorings](#refactorings)
-
-[Einstellungen](#einstellungen)
+4. [Einstellungen](#einstellungen)
 
 <br/>
 
-# Import eines Projektes
+## Import eines Projektes
 
 Für jede Aufgabenserie wird ein GitHub-_Repository_ zur Verfügung gestellt.
 Um den darin zur Verfügung gestellten Code zu nutzen, kann er wie folgt in Eclipse importiert werden.
@@ -46,7 +47,7 @@ Wenn die Aufgabenstellung Testfälle zur Verfügung stellt, können diese mit ei
 
  <br/>
 
-# Ausführen von _JUnit_-Testfällen
+## Ausführen von _JUnit_-Testfällen
 
 Um die Tests auszuführen, müsst ihr lediglich die Test-Klasse ausführen.
 
@@ -76,10 +77,10 @@ Wenn alle Testfälle erfolgreich waren, wird für jeden Testfall das entsprechen
 
 <br/>
 
-# Refactorings
+## Refactorings
 
 
-## Umbennen mehrerer Vorkommen eines Variablen-/Methoden-/Klassennamens
+### Umbennen mehrerer Vorkommen eines Variablen-/Methoden-/Klassennamens
 
 Um mehrere Vorkommen eines Variablennamens umbenennen zu können, geht ihr am Besten wie folgt vor:
 Zuerst markiert ihr eines der Vorkommen.
@@ -108,9 +109,9 @@ Bestätigt abschließend mit _Enter_ den neuen Namen.
 
 <br/>
 
-# Einstellungen
+## Einstellungen
 
-## Einstellungen des Code-Formatters
+### Einstellungen des Code-Formatters
 
 Über die Menüleiste unter `Window` den Menüpunkt `Preferences` auswählen.[^macos]
 
