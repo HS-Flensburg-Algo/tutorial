@@ -1,3 +1,11 @@
-title: Tutorials zu Algorithmen
+title: Tutorials zur Vorlesung Algorithmen
+author:
+  name: Jan Christiansen
+  email: jan.christiansen@hs-flensburg.de
+description: >
+  Tutorials zur Verwendung von Eclipse und git bzw. GitHub für die Vorlesung Algorithmen.
+
+minima:
+  date_format: "%d. %b %Y"
 
 theme: minima
