@@ -22,14 +22,14 @@ Ein Tool namens [reviewdog](https://github.com/reviewdog/reviewdog) sorgt dann d
 
 Um zu den Anmerkungen der automatischen Checks zu gelangen, müsst ihr zuerst den Reiter _Pull Request_ wählen.
 
-![](images/reviewdog/step1.jpg)
+![](images/feedback/step1.jpg)
 
 Es sollte dort einen _Pull Request_ geben, der Feedback heißt.
 Wählt diesen bitte aus.
 Falls dieser _Pull Request_ nicht existiert, nehmt bitte Kontakt zu mir auf.
 Das rote Kreuz zeigt an, dass die automatischen Checks noch Fehler gefunden haben:
 
-![](images/reviewdog/step2.jpg)
+![](images/feedback/step2.jpg)
 
 In dem _Pull Request_ namens Feedback könnt ihr sehen, welcher Check Fehler gefunden hat.
 Dazu müsst ihr auf der Seite etwas runterscrollen.
@@ -37,7 +37,7 @@ Die Fehler werden durch ein rotes Kreuz signalisiert.
 Es gibt drei verschiedene Checks.
 Im _Pull Request_ werden vier Checks angezeigt, aber der Check `Set Up Style Checker` führt nur eine interne Initialisierung aus und sollte immer erfolgreich sein.
 
-![](images/reviewdog/step3.jpg)
+![](images/feedback/step3.jpg)
 
 
 ## Stil-Anmerkungen des Linters
@@ -46,13 +46,13 @@ Der Style Checker überprüft, dass ihr euch an Grundregeln der Programmierung u
 Der Schritt `Run Style Checker` sollte zum initialen Abgabetermin einen grünen Haken zeigen.
 Im _Pull Request_ mit dem Namen _Feedback_, könnt ihr oben den Reiter _Files changed_ auswählen.
 
-![](images/reviewdog/step4.jpg)
+![](images/feedback/step4.jpg)
 
 Unter _Files changed_ seht ihr alle Änderungen, die ihr an dem Code im _Repositories_ durchgeführt habt.
 Dort könnt ihr auch zeilenweise die Anmerkungen des Linters sehen.
 Die Anmerkung steht jeweils unter der Codezeile, auf die sich die Anmerkung bezieht.
 
-![](images/reviewdog/step5.jpg)
+![](images/feedback/step5.jpg)
 
 In diesem Fall merkt der reviewdog zum Beispiel an, dass man im Quellcode die Einrückung des Codes mit Leerzeichen und nicht mit Tabulatoren machen sollte.
 
@@ -63,7 +63,7 @@ Wie ihr Eclipse konfigurieren könnt, könnt ihr unter https://hs-flensburg-algo
 Zur Abgabe sollte der Linter keine Anmerkungen mehr zu eurem Code haben.
 Das Umsetzen der Anmerkungen kann durchaus mehrere Iterationen in Anspruch nehmen, wie das folgende Meme eines Studierenden aus einem früheren Semester illustriert.
 
-![](images/reviewdog/meme.jpg)
+![](images/feedback/meme.jpg)
 
 
 ## Testfälle
@@ -74,7 +74,7 @@ Daher ist es trotz der Testfälle wichtig, sich zu überlegen, ob das Verhalten 
 
 Es gibt zwei Gruppen von Testfällen.
 
-![](images/reviewdog/test-case-results.jpg)
+![](images/feedback/test-case-results.jpg)
 
 Die `Basic Test Cases` enthalten grundlegenden Prüfungen der Funktionalität und sollten schon zum initialen Abgabetermin grün sein.
 Die `Advanced Test Cases` testen Verhalten ab, das erfahrungsgemäß etwas schwieriger umzusetzen ist.
@@ -91,13 +91,13 @@ Daher schaue ich mir die Abgaben in der Laborzeit an und schreibe Anmerkungen.
 Diese Anmerkungen müssen ebenfalls alle bei der Abgabe der überarbeiteten Version abgearbeitet sein.
 Diese Kommentare findet ihr ebenfalls unter _Files changed_ des _Pull Requests_.
 
-![](images/reviewdog/manual-comment.jpg)
+![](images/feedback/manual-comment.jpg)
 
 Die von mir geschriebenen Anmerkungen könnt ihr auch auf der Übersichtsseite des _Pull Requests_ sehen.
 Ich markiere beim Schreiben der Anmerkungen die Codezeilen, auf die sich der Kommentar bezieht.
 Diese Codezeilen könnt ihr oberhalb des Kommentares sehen.
 
-![](images/reviewdog/manual-comment-overview.jpg)
+![](images/feedback/manual-comment-overview.jpg)
 
 Ein Kommentar bezieht sich immer auf die Codezeilen am unteren Ende des Ausschnitts.
 In diesem Fall bezieht sich der Kommentar zum Beispiel auf die Zeile 7.
