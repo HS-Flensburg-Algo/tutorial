@@ -59,6 +59,8 @@ Unter [diesem Link](https://docs.github.com/en/free-pro-team@latest/github/setti
 
 Zum Bearbeiten und zur Abgabe der Aufgaben müsst ihr den über GitHub bereitgestellten Source-Code über die Konsole verwalten.  
 
+### Repository klonen
+
 Damit ihr den Code lokal bearbeiten könnt, müsst ihr das Repo klonen. Ihr benötigt dafür zunächst einen _SSH Key_. Diesen müsst ihr zu eurem GitHub-Account hinzufügen. Eine ausführliche Erklärung zur Generierung eines _SSH Keys_ und dem Hinzufügen des _SSH Keys_ zu eurem GitHub-Account findet ihr [hier](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
 
 Anschließend benötigt ihr die URL eures _Repos_.
@@ -78,6 +80,8 @@ Anschließend wechselt ihr in das heruntergeladene _Repository_ mit `cd <repo-na
 ```shell
 $ cd laboraufgabe00-jan-christiansen
 ```
+
+### Bearbeitete Dateien hochladen
 
 Nachdem ihr die Aufgabe bearbeitet habt, könnt ihr mit `git status` alle editierten Dateien sehen.
 
@@ -140,6 +144,8 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com:HS-Flensburg-Algo/laboraufgabe00-jan-christiansen.git
    f82bb14..d079b90  main -> main
 ```
+
+### Mögliche Probleme
 
 Es kann vorkommen, dass der Befehl `git push` nicht erfolgreich ist und ihr zum Beispiel eine Fehlermeldung der folgenden Art erhaltet.
 
