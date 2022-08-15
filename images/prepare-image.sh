@@ -6,7 +6,7 @@ print_usage() {
 }
 
 # set default values for options
-c_flag='true'
+c_flag='false'
 r_flag='40%'
 
 while getopts 'cr:' flag; do
