@@ -1,17 +1,19 @@
 ---
 layout: post
-title: "GitHub"
+title: "Git"
 ---
 
-1. [GitHub über die Konsole bedienen](#github-über-die-konsole-bedienen)
+1. [Installation von Git unter Windows](#installation-von-git-unter-windows)
 
-2. [Feedback und reviewdog](#feedback-und-reviewdog)
+2. [Konfiguration des Nutzers](#konfiguration-des-nutzers)
+
+3. [Git über die Konsole bedienen](#git-über-die-konsole-bedienen)
+
+4. [Commit-Nachrichten schreiben](#commit-nachrichten-schreiben)
 
 <br/>
 
-## GitHub über die Konsole bedienen
-
-### Installation von Git unter Windows
+## Installation von Git unter Windows
 
 Unter <https://git-scm.com/download/win> findet ihr den _Installer_. Der Download sollte automatisch starten.
 
@@ -33,7 +35,7 @@ Mit einem Rechtsklick in dem Ordner könnt ihr nun im Kontextmenü `Git Bash Her
 
 <br/>
 
-### Konfiguration des Nutzers
+## Konfiguration des Nutzers
 
 Damit GitHub euch die Commits, die ihr durchführt, zuordnen kann, solltet ihr einmal euren Namen und eure Mail-Adresse setzen.
 Dazu müsst ihr in der Konsole die folgenden beiden Befehle eingeben und jeweils mit der _Eingabe_-Taste bestätigen.
@@ -41,19 +43,19 @@ Ihr müsst dabei meinen Namen und meine E-Mail-Adresse natürlich durch eure jew
 Ihr solltet eine E-Mail-Adresse nutzen, die ihr auch bei GitHub eingetragen habt.
 Bitte beachtet, dass die E-Mail-Adresse von Personen eingesehen werden kann, die Zugriff auf eines eurer _Repositories_ haben.
 
-```
-git config --global user.name "Jan Christiansen"
+```shell
+$ git config --global user.name "Jan Christiansen"
 ```
 
-```
-git config --global user.email "jan.christiansen@hs-flensburg.de"
+```shell
+$ git config --global user.email "jan.christiansen@hs-flensburg.de"
 ```
 
 Unter [diesem Link](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#setting-your-commit-email-address-in-git) findet ihr bei Interesse noch eine alternative Erklärung und zusätzliche Informationen zu dieser Konfiguration und GitHub.
 
 <br/>
 
-### Git über die Konsole bedienen
+## Git über die Konsole bedienen
 
 Zum Bearbeiten und zur Abgabe der Aufgaben müsst ihr den über GitHub bereitgestellten Source-Code über die Konsole verwalten.  
 
@@ -62,46 +64,89 @@ Damit ihr den Code lokal bearbeiten könnt, müsst ihr das Repo klonen. Ihr ben�
 Anschließend benötigt ihr die URL eures _Repos_.
 Diese erhaltet ihr auf der GitHub-Webseite:
 
-![](images/git/step1.png)
+![](images/git/step1.jpg)
 
 Mit Hilfe der URL könnt ihr das _Repository_ über eure Konsole mit `git clone <url>` herunterladen.
 Sofern ihr bei der Generierung des _SSH Keys_ eine _Passphrase_ festgelegt habt, müsst ihr diese nun eingeben.
 
+```shell
+$ git clone git@github.com:HS-Flensburg-Algo/laboraufgabe00-jan-christiansen.git
+```
+
 Anschließend wechselt ihr in das heruntergeladene _Repository_ mit `cd <repo-name>`.
 
-![](images/git/step2.png)
+```shell
+$ cd laboraufgabe00-jan-christiansen
+```
 
 Nachdem ihr die Aufgabe bearbeitet habt, könnt ihr mit `git status` alle editierten Dateien sehen.
 
-![](/images/git/step3.png)
+```shell
+$ git status
+On branch master
+Your branch is up to data with `origin/master`.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+       modified:   src/Arrays.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
 
 Die Dateien, die ihr abgeben wollt, müssen nun jeweils mit `git add <file-path>` selektiert werden.
 
-![](images/git/step4.png)
+```shell
+$ git add src/Arrays.java
+```
 
 Zum Überprüfen, ob alle abzugebenen Dateien ausgewählt/hinzugefügt wurden, kann erneut `git status` aufgerufen werden.
 Alle in grün geschriebenen Dateien wurden zur Abgabe selektiert.
 
-![](images/git/step5.png)
+```shell
+$ git status
+On branch master
+Your branch is up to data with `origin/master`.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstange)
+
+       modified:    src/Arrays.java
+```
 
 Vor dem Upload müssen die Dateien "committet" werden.
 Einen _Commit_ führt man mit dem Kommando `git commit -m "<commit-message>"` durch.
 Der Text `<commit-message>` ist dabei eine Beschreibung der Arbeiten, die ihr durchgeführt habt und die ihr mit dem _Commit_ bei GitHub hochladen wollt.
 
-![](images/git/step6.png)
+```shell
+$ git commit -m "Change ..."
+[master 7d612e] Change ...
+ 1 file changed, 1 deletion(-)
+```
 
 Die Abgabe / Der Upload der Bearbeitung erfolgt zu guter Letzt mit `git push`.
 Mit dem Befehl `git push` werden alle _Commits_, die ihr seit dem letzten `git push` durchgeführt habt, hochgeladen.
 
-![](images/git/step7.png)
-
+```shell
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compresiosn using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 366 bytes | 366.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com:HS-Flensburg-Algo/laboraufgabe00-jan-christiansen.git
+   f82bb14..d079b90  main -> main
+```
 
 Es kann vorkommen, dass der Befehl `git push` nicht erfolgreich ist und ihr zum Beispiel eine Fehlermeldung der folgenden Art erhaltet.
 
 ```
-To github.com:hsfl-pltp-classroom/test-jan-christiansen.git
- ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'git@github.com:hsfl-pltp-classroom/test-jan-christiansen.git'
+To github.com:HS-Flensburg-Algo/laboraufgabe00-jan-christiansen.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'git@github.com:HS-Flensburg-Algo/laboraufgabe00-jan-christiansen.git'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
@@ -122,7 +167,7 @@ remote: Counting objects: 100% (13/13), done.
 remote: Compressing objects: 100% (9/9), done.
 remote: Total 10 (delta 3), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (10/10), done.
-From github.com:hsfl-pltp-classroom/test-jan-christiansen
+From github.com:HS-Flensburg-Algo/laboraufgabe00-jan-christiansen
    a7a5355..e6dd480  master     -> origin/master
 Merge made by the 'recursive' strategy.
  .github/classroom/autograding.json | 14 ++++++++++++++
@@ -137,45 +182,11 @@ Jetzt solltet ihr ganz normal mit dem Befehl `git push` fortfahren können.
 <br/>
 
 
-### Commit-Nachrichten schreiben
+## Commit-Nachrichten schreiben
 
 Wenn man professionell Software entwickelt, sollte man sich etwas Mühe mit den _Commit_-Nachrichten geben.
 Wie in vielen anderen Bereichen der Informatik sollten die Nachrichten zumindest erst einmal einheitlich sein.
 Ihr sollt euch im Zuge der Veranstaltung gern so gut es geht an die Vorschläge unter [How to Write a Git Commit Message](https://cbea.ms/git-commit/) halten.
-Aufgrund der recht kleinen Projekte, die im Rahmen der Vorlesung programmiert werden, reicht es, wenn eurer _Commit_-Nachrichten nur aus einem _Subject_ bestehen.
+Aufgrund der recht kleinen Projekte, die im Rahmen der Vorlesung programmiert werden, reicht es, wenn eure _Commit_-Nachrichten nur aus einem _Subject_ bestehen.
 Das heißt, mögliche Nachrichten wären zum Beispiel `Add first implementation of ArrayList`, `Fix size method` oder `Rename class to ArrayList`. 
-
-  <br/>
-
-## Feedback und reviewdog
-
-### Anmerkungen lesen
-
-Die _Repositories_ mit den Laboraufgaben sind so konfiguriert, dass automatisch geprüft wird, dass ihr euch an bestimmte Programmierregeln haltet.
-Diese automatische Überprüfung wird mit dem Tool [Checkstyle](https://checkstyle.sourceforge.io) durchgeführt.
-Ein Tool namens [reviewdog](https://github.com/reviewdog/reviewdog) sorgt dann dafür, dass die Anmerkungen, die Checkstyle hat, an den richtigen Stellen eures Codes bei GitHub abgezeigt werden.
-
-Um zu den Anmerkungen zu gelangen, müsst ihr zuerst den Reiter _Pull Request_ wählen.
-
-![](images/reviewdog/step1.png)
-
-Es sollte durch einen _Pull Request_ geben, der Feedback heißt.
-Wählt diesen bitte aus.
-Falls dieser _Pull Request_ nicht existiert, nehmt bitte Kontakt zu mir auf.
-Das rote Kreuz zeigt an, dass noch Fehler gefunden wurden:
-
-![](images/reviewdog/step2.png)
-
-Wenn ihr den _Pull Request_ gewählt habt, könnt ihr oben den Reiter "Files changed" auswählen.
-
-![](images/reviewdog/step3.png)
-
-Ihr seht dann zeilenweise Anmerkungen an eurer Abgabe.
-
-![](images/reviewdog/step4.png)
-
-Wenn ihr eine Lösung hochgeladen habt, schaue ich mir die Lösung in der entsprechenden Laborzeit an und schreibe Kommentare.
-Diese Kommentare findet ihr ebenfalls unter _Files Changed_ des _Pull Requests_.
-
-![](images/reviewdog/step5.png)
 
