@@ -31,49 +31,47 @@ Anschließend wählt ihr die Art in dem das zu importierende Repository vorliegt
 
 
 Im nachfolgenden Schritt wählt ihr den Pfad des Ordners für die entsprechende Serie aus.
-Der Knopf `Directory...` kann genutzt werden, um das Verzeichnis zu suchen.
+Der Knopf `Browse...` kann genutzt werden, um das Verzeichnis zu suchen.
 
 ![Import erfolgreich abgeschlossen](images/import/screen4.png)
 
 
 Die Bearbeitung der Aufgaben nehmt ihr im Ordner `/src/main/java/` vor.
+Die _Repositories_ enthalten immer ein Paket `de.fuas.algorithms`, in dem die Java-Dateien liegen sollten.
 
 ![Import erfolgreich abgeschlossen](images/import/screen5.png)
 
 
 Wenn die Aufgabenstellung Testfälle zur Verfügung stellt, können diese mit einem klickt der rechten Maustaste und den Menüpunkt `Run As JUnit Test` ausgeführt werden.
 
-![Import erfolgreich abgeschlossen](images/import/screen6.png)
+![Import erfolgreich abgeschlossen](images/import/screen6.jpg)
 
  <br/>
 
 ## Ausführen von _JUnit_-Testfällen
 
-Um die Tests auszuführen, müsst ihr lediglich die Test-Klasse ausführen.
+Statt mit dem Rechtsklick, wie zuvor gezeigt, könnt ihr die Tests einer einzelnen Testklasse auch ausführen, indem ihr die Klasse öffnet und auf den _Play_-Knopf drückt.
 
-![Ausführung der Tests](images/junit/screen1.png)
+![Ausführung der Tests](images/junit/screen1.jpg)
 
 Nach dem Ausführen erhaltet ihr das Testergebnis.
-Als Bezeichnung für den Test wird der Methodenname verwendet.
+Als Bezeichnung für den Test wird der Name der Test-Methode verwendet.
+In diesem Fall heißt die Methode zum Beispiel `testArrayComplete`.
 So könnt ihr nachvollziehen, bei welchem Test es vielleicht noch Schwierigkeiten gibt.
-In diesem Fall war der Test nicht erfolgreich. (Dies ist zum Einen an dem roten Balken, als auch an dem Icon am Testfall zu erkennen.)
+In diesem Fall war der Test nicht erfolgreich.
+Dies ist an dem roten Balken, als auch an dem Icon am Testfall zu erkennen.
 Die Icons an den Testfällen zeigen das Ergebnis für den jeweiligen Test an.
-Der obere Balken trifft eine Aussage darüber, ob ALLE Tests erfolgreich waren oder nicht.
+Der obige Balken trifft eine Aussage darüber, ob ALLE Tests erfolgreich waren oder nicht.
 
-![Anzeige des Fehlers](images/junit/screen2.png)
+![Anzeige des Fehlers](images/junit/screen2.jpg)
 
 
 Nachdem alle Fehler behoben wurden und die geprüfte Methode alle Testvoraussetzungen erfüllt, ist folgendes zu sehen:
 Das Icon am Testfall zeigt, dass der einzelne Test erfolgreich war.
-In diesem Beispiel war `testExpandArray` erfolgreich und `testShiftElements` nicht erfolgreich (siehe jeweils Testfall-Icon).
-Es waren somit nicht alle Tests erfolgreich - der rote Balken wird angezeigt.
+In diesem Beispiel war `testArrayComplete` erfolgreich.
+Da damit alle Tests in dieser Klasse erfolgreich waren, wird der Balken grün angezeigt.
 
-![Ein Test erfolgreich](images/junit/screen3.png)
-
-
-Wenn alle Testfälle erfolgreich waren, wird für jeden Testfall das entsprechende Icon angezeigt und der Balken wir grün angezeigt.
-
-![Zwei Tests erfolgreich](images/junit/screen4.png)
+![Zwei Tests erfolgreich](images/junit/screen3.jpg)
 
 <br/>
 
@@ -88,7 +86,7 @@ Zuerst markiert ihr eines der Vorkommen.
 ![Namen markieren](images/functions/rename/screen1.png)
 
 
-Anschließend klickt ihr mit der rechten Maustaste auf den zu ändernden Namen, wählt `Refactor` und `Rename` aus.
+Anschließend klickt ihr mit der rechten Maustaste auf den zu ändernden Namen, wählt `Refactor` und `Rename...` aus.
 
 ![Aktivieren des Refactoring-Renaming-Modus](images/functions/rename/screen2.png)
 
@@ -102,7 +100,8 @@ Nun ist der Modus zum Umbenennen aktiviert...
 
 ![Verändern eines Namens](images/functions/rename/screen4.png)
 
-
+In diesem Modus werden alle Vorkommen der Variable gleichzeitig verändert.
+Dieser Weg zum Umbenennen kann euch einige Zeit sparen, da es recht mühsam sein kann, alle Vorkommen einer Variable umzubenennen.
 Bestätigt abschließend mit _Enter_ den neuen Namen.
 
 ![Bestätigen des neuen Namens](images/functions/rename/screen5.png)
