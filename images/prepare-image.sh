@@ -2,12 +2,17 @@
 # second argument ist the position of the highlight rectangle
 
 print_usage() {
-    printf "Usage: prepare-image.sh -c <filename> <rectangle1> <rectangle2>"
+    printf "Usage: prepare-image.sh -c -r <resolution> <filename> <rectangle1> ... <rectanglen>"
 }
 
-while getopts 'c' flag; do
+# set default values for options
+c_flag='true'
+r_flag='40%'
+
+while getopts 'cr:' flag; do
     case "${flag}" in
         c) c_flag='true' ;;
+        r) r_flag="${OPTARG}" ;;
         *) print_usage
             exit 1 ;;
     esac
@@ -32,8 +37,8 @@ if [ "$c_flag" == 'true' ]; then
     echo "crop $tempjpgname"
     convert -crop 3360x1940+0+160 $tempjpgname $tempjpgname
 fi
-echo "resize $tempjpgname"
-mogrify -resize 40% $tempjpgname
+echo "resize $tempjpgname to $r_flag"
+mogrify -resize "${r_flag}" $tempjpgname
 echo "rename $tempjpgname to $jpgname"
 mv $tempjpgname $jpgname
 echo "delete temporary file $temppngname"

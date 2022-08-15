@@ -19,27 +19,27 @@ Für jede Aufgabenserie wird ein GitHub-_Repository_ zur Verfügung gestellt.
 Um den darin zur Verfügung gestellten Code zu nutzen, kann er wie folgt in Eclipse importiert werden.
 Mit einem Rechtsklick im `Package Explorer` oder über die Menüleiste unter `File` und dann `Datei` den Menüpunkt `Import...` auswählen.
 
-![Import-Prozess starten](images/import/screen1.png)
+![Import-Prozess starten](images/import/screen1.jpg)
 
 
 Anschließend wählt ihr die Art in dem das zu importierende Repository vorliegt. In diesem Fall handelt es sich um `Existing Gradle Project.`.
 
-![Import-Typ wählen](images/import/screen2.png)
+![Import-Typ wählen](images/import/screen2.jpg)
 
 
-![Import-Pfad wählen](images/import/screen3.png)
+![Import-Pfad wählen](images/import/screen3.jpg)
 
 
 Im nachfolgenden Schritt wählt ihr den Pfad des Ordners für die entsprechende Serie aus.
 Der Knopf `Browse...` kann genutzt werden, um das Verzeichnis zu suchen.
 
-![Import erfolgreich abgeschlossen](images/import/screen4.png)
+![Import erfolgreich abgeschlossen](images/import/screen4.jpg)
 
 
 Die Bearbeitung der Aufgaben nehmt ihr im Ordner `/src/main/java/` vor.
 Die _Repositories_ enthalten immer ein Paket `de.fuas.algorithms`, in dem die Java-Dateien liegen sollten.
 
-![Import erfolgreich abgeschlossen](images/import/screen5.png)
+![Import erfolgreich abgeschlossen](images/import/screen5.jpg)
 
 
 Wenn die Aufgabenstellung Testfälle zur Verfügung stellt, können diese mit einem klickt der rechten Maustaste und den Menüpunkt `Run As JUnit Test` ausgeführt werden.
@@ -83,28 +83,28 @@ Da damit alle Tests in dieser Klasse erfolgreich waren, wird der Balken grün an
 Um mehrere Vorkommen eines Variablennamens umbenennen zu können, geht ihr am Besten wie folgt vor:
 Zuerst markiert ihr eines der Vorkommen.
 
-![Namen markieren](images/functions/rename/screen1.png)
+![Namen markieren](images/functions/rename/screen1.jpg)
 
 
 Anschließend klickt ihr mit der rechten Maustaste auf den zu ändernden Namen, wählt `Refactor` und `Rename...` aus.
 
-![Aktivieren des Refactoring-Renaming-Modus](images/functions/rename/screen2.png)
+![Aktivieren des Refactoring-Renaming-Modus](images/functions/rename/screen2.jpg)
 
 
 Nun ist der Modus zum Umbenennen aktiviert...
 
-![Refactoring-Renaming-Modus aktiviert](images/functions/rename/screen3.png)
+![Refactoring-Renaming-Modus aktiviert](images/functions/rename/screen3.jpg)
 
 
 ... und ihr könnt den bisherigen Namen verändern.
 
-![Verändern eines Namens](images/functions/rename/screen4.png)
+![Verändern eines Namens](images/functions/rename/screen4.jpg)
 
 In diesem Modus werden alle Vorkommen der Variable gleichzeitig verändert.
 Dieser Weg zum Umbenennen kann euch einige Zeit sparen, da es recht mühsam sein kann, alle Vorkommen einer Variable umzubenennen.
 Bestätigt abschließend mit _Enter_ den neuen Namen.
 
-![Bestätigen des neuen Namens](images/functions/rename/screen5.png)
+![Bestätigen des neuen Namens](images/functions/rename/screen5.jpg)
 
 <br/>
 
