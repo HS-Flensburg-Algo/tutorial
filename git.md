@@ -68,7 +68,7 @@ Diese erhaltet ihr auf der GitHub-Webseite:
 
 ![](images/git/step1.jpg)
 
-Mit Hilfe der URL könnt ihr das _Repository_ über eure Konsole mit `git clone <url>` herunterladen.
+Mithilfe der URL könnt ihr das _Repository_ über eure Konsole mit `git clone <url>` herunterladen.
 Sofern ihr bei der Generierung des _SSH Keys_ eine _Passphrase_ festgelegt habt, müsst ihr diese nun eingeben.
 
 ```shell
@@ -105,7 +105,7 @@ Die Dateien, die ihr abgeben wollt, müssen nun jeweils mit `git add <file-path>
 $ git add src/Arrays.java
 ```
 
-Zum Überprüfen, ob alle abzugebenen Dateien ausgewählt/hinzugefügt wurden, kann erneut `git status` aufgerufen werden.
+Zum Überprüfen, ob alle abzugebenden Dateien ausgewählt/hinzugefügt wurden, kann erneut `git status` aufgerufen werden.
 Alle in grün geschriebenen Dateien wurden zur Abgabe selektiert.
 
 ```shell
@@ -129,7 +129,7 @@ $ git commit -m "Change ..."
  1 file changed, 1 deletion(-)
 ```
 
-Die Abgabe / Der Upload der Bearbeitung erfolgt zu guter Letzt mit `git push`.
+Die Abgabe / der Upload der Bearbeitung erfolgt zu guter Letzt mit `git push`.
 Mit dem Befehl `git push` werden alle _Commits_, die ihr seit dem letzten `git push` durchgeführt habt, hochgeladen.
 
 ```shell
@@ -160,12 +160,12 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-Dies passiert zum Beispiel, wenn ihr parallel mit Hilfe des Web-Interface von GitHub Dateien hochgeladen oder Dateien verändert habt.
+Dies passiert zum Beispiel, wenn ihr parallel mithilfe des Web-Interface von GitHub Dateien hochgeladen oder Dateien verändert habt.
 Um dieses Problem zu beheben, müsst ihr einmal die Änderungen, die im Repo passiert sind, zu euch auf den Rechner holen.
 Dazu müsst ihr den Befehl `git pull` ausführen.
 Nach Ausführung des Befehls sollte sich ein Editor öffnen.
 Den Editor könnt ihr einfach schließen und die Datei speichern.
-Danach sollte eine Nachriht der folgenden Art erscheinen.
+Danach sollte eine Nachricht der folgenden Art erscheinen.
 
 ```
 remote: Enumerating objects: 13, done.
