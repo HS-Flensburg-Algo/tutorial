@@ -56,9 +56,9 @@ Die Anmerkung steht jeweils unter der Codezeile, auf die sich die Anmerkung bezi
 
 In diesem Fall merkt der reviewdog zum Beispiel an, dass man im Quellcode die Einrückung des Codes mit Leerzeichen und nicht mit Tabulatoren machen sollte.
 
-Der Linter überpüft unter anderem, dass eurer Code eine bestimmte Einrückung nutzt.
+Der Linter überprüft unter anderem, dass eurer Code eine bestimmte Einrückung nutzt.
 Ihr könnt Eclipse so konfigurieren, dass es automatisch die gewünschte Einrückung erzeugt, wenn ihr den Code automatisch formatiert.
-Wie ihr Eclipse konfigurieren könnt, könnt ihr unter https://hs-flensburg-algo.github.io/tutorials/eclipse.html#einstellungen lesen.
+Wie ihr Eclipse konfigurieren könnt, könnt ihr [hier](https://hs-flensburg-algo.github.io/tutorials/eclipse.html#einstellungen) lesen.
 
 Zur Abgabe sollte der Linter keine Anmerkungen mehr zu eurem Code haben.
 Das Umsetzen der Anmerkungen kann durchaus mehrere Iterationen in Anspruch nehmen, wie das folgende Meme eines Studierenden aus einem früheren Semester illustriert.
@@ -76,12 +76,12 @@ Es gibt zwei Gruppen von Testfällen.
 
 ![](images/feedback/test-case-results.jpg)
 
-Die `Basic Test Cases` enthalten grundlegenden Prüfungen der Funktionalität und sollten schon zum initialen Abgabetermin grün sein.
+Die `Basic Test Cases` enthalten grundlegende Prüfungen der Funktionalität und sollten schon zum initialen Abgabetermin grün sein.
 Die `Advanced Test Cases` testen Verhalten ab, das erfahrungsgemäß etwas schwieriger umzusetzen ist.
 Diese Testfälle müssen erst zur Abgabe der Überarbeitung grün sein.
 
-Die Testfälle könne einfach in Eclipse ausgeführt werden, so dass die Lösung nicht hochgeladen werden muss, um zu prüfen, ob die Testfälle erfüllt sind.
-Unter https://hs-flensburg-algo.github.io/tutorials/eclipse.html#ausführen-von-junit-testfällen wird erläutert, wie man die Testfälle in Eclipse ausführt.
+Die Testfälle können einfach in Eclipse ausgeführt werden, sodass die Lösung nicht hochgeladen werden muss, um zu prüfen, ob die Testfälle erfüllt sind.
+[Hier](https://hs-flensburg-algo.github.io/tutorials/eclipse.html#ausführen-von-junit-testfällen) wird erläutert, wie man die Testfälle in Eclipse ausführt.
 
 
 ## Manuelle Kommentare
@@ -95,14 +95,14 @@ Diese Kommentare findet ihr ebenfalls unter _Files changed_ des _Pull Requests_.
 
 Die von mir geschriebenen Anmerkungen könnt ihr auch auf der Übersichtsseite des _Pull Requests_ sehen.
 Ich markiere beim Schreiben der Anmerkungen die Codezeilen, auf die sich der Kommentar bezieht.
-Diese Codezeilen könnt ihr oberhalb des Kommentares sehen.
+Diese Codezeilen könnt ihr oberhalb des Kommentars sehen.
 
 ![](images/feedback/manual-comment-overview.jpg)
 
 Ein Kommentar bezieht sich immer auf die Codezeilen am unteren Ende des Ausschnitts.
 In diesem Fall bezieht sich der Kommentar zum Beispiel auf die Zeile 7.
 GitHub zeigt bei einem solchen Kommentar immer mindestens vier Zeilen an, auch wenn sich der Kommentar nur auf eine Zeile bezieht.
-Dies führt manchmal zu Missverständnisse, auf welchen Teil des Codes sich ein Kommentar bezieht.
+Dies führt manchmal zu Missverständnissen, auf welchen Teil des Codes sich ein Kommentar bezieht.
 
 Wenn ein Kommentar aus meiner Sicht abgearbeitet ist, wird er von mir als _Resolved_ markiert.
 Wenn alle Kommentare als _Resolved_ markiert sind und die Checks alle grün sind, wird der _Pull Request_ geschlossen.

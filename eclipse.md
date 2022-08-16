@@ -22,7 +22,7 @@ Mit einem Rechtsklick im `Package Explorer` oder über die Menüleiste unter `Fi
 ![Import-Prozess starten](images/import/screen1.jpg)
 
 
-Anschließend wählt ihr die Art in dem das zu importierende Repository vorliegt. In diesem Fall handelt es sich um `Existing Gradle Project.`.
+Anschließend wählt ihr die Art, in dem das zu importierende Repository vorliegt. In diesem Fall handelt es sich um `Existing Gradle Project.`.
 
 ![Import-Typ wählen](images/import/screen2.jpg)
 
@@ -42,7 +42,7 @@ Die _Repositories_ enthalten immer ein Paket `de.fuas.algorithms`, in dem die Ja
 ![Import erfolgreich abgeschlossen](images/import/screen5.jpg)
 
 
-Wenn die Aufgabenstellung Testfälle zur Verfügung stellt, können diese mit einem klickt der rechten Maustaste und den Menüpunkt `Run As JUnit Test` ausgeführt werden.
+Wenn die Aufgabenstellung Testfälle zur Verfügung stellt, können diese mit einem Klick der rechten Maustaste und den Menüpunkt `Run As JUnit Test` ausgeführt werden.
 
 ![Import erfolgreich abgeschlossen](images/import/screen6.jpg)
 
@@ -78,9 +78,9 @@ Da damit alle Tests in dieser Klasse erfolgreich waren, wird der Balken grün an
 ## Refactorings
 
 
-### Umbennen mehrerer Vorkommen eines Variablen-/Methoden-/Klassennamens
+### Umbenennen mehrerer Vorkommen eines Variablen-/Methoden-/Klassennamens
 
-Um mehrere Vorkommen eines Variablennamens umbenennen zu können, geht ihr am Besten wie folgt vor:
+Um mehrere Vorkommen eines Variablennamens umbenennen zu können, geht ihr am besten wie folgt vor:
 Zuerst markiert ihr eines der Vorkommen.
 
 ![Namen markieren](images/functions/rename/screen1.jpg)
