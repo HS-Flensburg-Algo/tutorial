@@ -106,3 +106,7 @@ Dies führt manchmal zu Missverständnissen, auf welchen Teil des Codes sich ein
 
 Wenn ein Kommentar aus meiner Sicht abgearbeitet ist, wird er von mir als _Resolved_ markiert.
 Wenn alle Kommentare als _Resolved_ markiert sind und die Checks alle grün sind, wird der _Pull Request_ geschlossen.
+
+**Bitte markiert Kommentare nicht selbst als _Resolved_.**
+
+**Bitte schließt oder merget keine Pull Requests.**

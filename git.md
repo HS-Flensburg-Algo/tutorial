@@ -33,6 +33,8 @@ Nun öffnet ihr mit dem Windows Explorer den Ordner, in dem ihr die Bearbeitung 
 
 Mit einem Rechtsklick in dem Ordner könnt ihr nun im Kontextmenü `Git Bash Here` auswählen, es öffnet sich ein Konsolenfenster.
 
+**Hinweis:** Die `Git Bash` nutzt die Tastenkombination `Strg + Einfg` für Kopieren und `Umschalt + Einfg` für Einfügen statt der üblichen `Strg + C` für Kopieren und `Strg + V` für Einfügen.
+
 <br/>
 
 ## Konfiguration des Nutzers
@@ -102,8 +104,12 @@ no changes added to commit (use "git add" and/or "git commit -a")
 Die Dateien, die ihr abgeben wollt, müssen nun jeweils mit `git add <file-path>` selektiert werden.
 
 ```shell
-$ git add src/Arrays.java
+$ git add src/main/java/de/fuas/algorithms/HelloWorld.java
 ```
+
+**Hinweise:**
+- Ihr könnt auch mehrere Dateien auf einmal hinzufügen, indem ihr die Dateipfade durch Leerzeichen getrennt auflistet, also zum Beispiel `git add <filepath1> <filepath2>`.
+
 
 Zum Überprüfen, ob alle abzugebenden Dateien ausgewählt/hinzugefügt wurden, kann erneut `git status` aufgerufen werden.
 Alle in grün geschriebenen Dateien wurden zur Abgabe selektiert.
