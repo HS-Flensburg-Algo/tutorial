@@ -15,7 +15,7 @@ title: "Eclipse"
 
 ## Import eines Projektes
 
-Für jede Aufgabenserie wird ein GitHub-_Repository_ zur Verfügung gestellt.
+Für jede Aufgabenserie wird ein GitHub\-_Repository_ zur Verfügung gestellt.
 Um den darin zur Verfügung gestellten Code zu nutzen, kann er wie folgt in Eclipse importiert werden.
 Mit einem Rechtsklick im `Package Explorer` oder über die Menüleiste unter `File` und dann `Datei` den Menüpunkt `Import...` auswählen.
 
