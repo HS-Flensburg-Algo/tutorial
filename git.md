@@ -33,7 +33,9 @@ Nun öffnet ihr mit dem Windows Explorer den Ordner, in dem ihr die Bearbeitung 
 
 Mit einem Rechtsklick in dem Ordner könnt ihr nun im Kontextmenü `Git Bash Here` auswählen, es öffnet sich ein Konsolenfenster.
 
-**Hinweis:** Die `Git Bash` nutzt die Tastenkombination `Strg + Einfg` für Kopieren und `Umschalt + Einfg` für Einfügen statt der üblichen `Strg + C` für Kopieren und `Strg + V` für Einfügen.
+**Hinweise:**
+- Die `Git Bash` nutzt die Tastenkombination `Strg + Einfg` für Kopieren und `Umschalt + Einfg` für Einfügen statt der üblichen `Strg + C` für Kopieren und `Strg + V` für Einfügen.
+- Die `Git Bash` unterstützt Autovervollständigung für Dateien, das heißt, statt den gesamten Pfad anzugeben, könnt ihr den Pfad starten und dann `Tab` drücken, damit der Pfad vervollständigt wird.
 
 <br/>
 
