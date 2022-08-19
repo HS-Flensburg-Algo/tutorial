@@ -47,11 +47,11 @@ Ihr müsst dabei meinen Namen und meine E-Mail-Adresse natürlich durch eure jew
 Ihr solltet eine E-Mail-Adresse nutzen, die ihr auch bei GitHub eingetragen habt.
 Bitte beachtet, dass die E-Mail-Adresse von Personen eingesehen werden kann, die Zugriff auf eines eurer _Repositories_ haben.
 
-```shell
+```ShellSession
 $ git config --global user.name "Jan Christiansen"
 ```
 
-```shell
+```ShellSession
 $ git config --global user.email "jan.christiansen@hs-flensburg.de"
 ```
 
@@ -75,13 +75,13 @@ Diese erhaltet ihr auf der GitHub-Webseite:
 Mithilfe der URL könnt ihr das _Repository_ über eure Konsole mit `git clone <url>` herunterladen.
 Sofern ihr bei der Generierung des _SSH Keys_ eine _Passphrase_ festgelegt habt, müsst ihr diese nun eingeben.
 
-```shell
+```ShellSession
 $ git clone git@github.com:HS-Flensburg-Algo/laboraufgabe00-jan-christiansen.git
 ```
 
 Anschließend wechselt ihr in das heruntergeladene _Repository_ mit `cd <repo-name>`.
 
-```shell
+```ShellSession
 $ cd laboraufgabe00-jan-christiansen
 ```
 
@@ -89,7 +89,7 @@ $ cd laboraufgabe00-jan-christiansen
 
 Nachdem ihr die Aufgabe bearbeitet habt, könnt ihr mit `git status` alle editierten Dateien sehen.
 
-```shell
+```ShellSession
 $ git status
 On branch master
 Your branch is up to data with `origin/master`.
@@ -105,7 +105,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Die Dateien, die ihr abgeben wollt, müssen nun jeweils mit `git add <file-path>` selektiert werden.
 
-```shell
+```ShellSession
 $ git add src/main/java/de/fuas/algorithms/HelloWorld.java
 ```
 
@@ -116,7 +116,7 @@ $ git add src/main/java/de/fuas/algorithms/HelloWorld.java
 Zum Überprüfen, ob alle abzugebenden Dateien ausgewählt/hinzugefügt wurden, kann erneut `git status` aufgerufen werden.
 Alle in grün geschriebenen Dateien wurden zur Abgabe selektiert.
 
-```shell
+```ShellSession
 $ git status
 On branch master
 Your branch is up to data with `origin/master`.
@@ -131,7 +131,7 @@ Vor dem Upload müssen die Dateien "committet" werden.
 Einen _Commit_ führt man mit dem Kommando `git commit -m "<commit-message>"` durch.
 Der Text `<commit-message>` ist dabei eine Beschreibung der Arbeiten, die ihr durchgeführt habt und die ihr mit dem _Commit_ bei GitHub hochladen wollt.
 
-```shell
+```ShellSession
 $ git commit -m "Change ..."
 [master 7d612e] Change ...
  1 file changed, 1 deletion(-)
@@ -140,7 +140,7 @@ $ git commit -m "Change ..."
 Die Abgabe / der Upload der Bearbeitung erfolgt zu guter Letzt mit `git push`.
 Mit dem Befehl `git push` werden alle _Commits_, die ihr seit dem letzten `git push` durchgeführt habt, hochgeladen.
 
-```shell
+```ShellSession
 $ git push
 Enumerating objects: 7, done.
 Counting objects: 100% (7/7), done.
@@ -157,7 +157,7 @@ To https://github.com:HS-Flensburg-Algo/laboraufgabe00-jan-christiansen.git
 
 Es kann vorkommen, dass der Befehl `git push` nicht erfolgreich ist und ihr zum Beispiel eine Fehlermeldung der folgenden Art erhaltet.
 
-```
+```ShellSession
 To github.com:HS-Flensburg-Algo/laboraufgabe00-jan-christiansen.git
  ! [rejected]        main -> main (fetch first)
 error: failed to push some refs to 'git@github.com:HS-Flensburg-Algo/laboraufgabe00-jan-christiansen.git'
@@ -175,7 +175,7 @@ Nach Ausführung des Befehls sollte sich ein Editor öffnen.
 Den Editor könnt ihr einfach schließen und die Datei speichern.
 Danach sollte eine Nachricht der folgenden Art erscheinen.
 
-```
+```ShellSession
 remote: Enumerating objects: 13, done.
 remote: Counting objects: 100% (13/13), done.
 remote: Compressing objects: 100% (9/9), done.
