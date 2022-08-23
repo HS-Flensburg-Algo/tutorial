@@ -83,6 +83,18 @@ Diese Testfälle müssen erst zur Abgabe der Überarbeitung grün sein.
 Die Testfälle können einfach in Eclipse ausgeführt werden, sodass die Lösung nicht hochgeladen werden muss, um zu prüfen, ob die Testfälle erfüllt sind.
 [Hier](https://hs-flensburg-algo.github.io/tutorials/eclipse.html#ausführen-von-junit-testfällen) wird erläutert, wie man die Testfälle in Eclipse ausführt.
 
+Man kann grundsätzliche Informationen über die Testfälle auch direkt bei GitHub einsehen.
+Dazu muss man auf `Details` klicken.
+
+![](images/feedback/test-case-details.jpg)
+
+Man erhält dann die Ausgabe, welche die Ausführung der Testfälle liefert.
+
+![](images/feedback/test-case-shell.jpg)
+
+In dieser Ausgabe kann man zum Beispiel ablesen `1 test completed, 1 failed`, das heißt, ein Testfall wurde ausgeführt und ein Testfall ist dabei fehlgeschlagen.
+Die Angabe `HelloWorldTest > testArrayComplete() FAILED` besagt, dass der Testfall mit dem Namen `testArrayComplete` in der Klasse `HelloWorldTest` fehlgeschlagen ist.
+
 
 ## Manuelle Kommentare
 
