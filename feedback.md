@@ -65,7 +65,7 @@ Wie ihr Eclipse konfigurieren könnt, könnt ihr [hier](https://hs-flensburg-alg
 Zur Abgabe sollte der Linter keine Anmerkungen mehr zu eurem Code haben.
 Das Umsetzen der Anmerkungen kann durchaus mehrere Iterationen in Anspruch nehmen, wie das folgende Meme eines Studierenden aus einem früheren Semester illustriert.
 
-![](images/feedback/meme.jpg)
+![](images/feedback/meme.jpg){: .centered}
 
 
 ## Testfälle
