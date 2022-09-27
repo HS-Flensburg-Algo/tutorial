@@ -35,7 +35,9 @@ In dem _Pull Request_ namens Feedback könnt ihr sehen, welcher Check Fehler gef
 Dazu müsst ihr auf der Seite etwas runterscrollen.
 Die Fehler werden durch ein rotes Kreuz signalisiert.
 Es gibt drei verschiedene Checks.
-Im _Pull Request_ werden vier Checks angezeigt, aber der Check `Set Up Style Checker` führt nur eine interne Initialisierung aus und sollte immer erfolgreich sein.
+Im _Pull Request_ werden vier Checks angezeigt, da die Ausführung des Linters aus zwei Schritten besteht.
+Beim Schritt `Run Checkstyle` wird der Linter ausgeführt.
+Beim Schritt `Run Reviewdog` werden die Anmerkungen des Linter so aufbereitet, dass Sie an die einzelnen Zeilen eures Codes bei GitHub geschrieben werden.
 
 ![](images/feedback/step3.jpg)
 
@@ -43,7 +45,7 @@ Im _Pull Request_ werden vier Checks angezeigt, aber der Check `Set Up Style Che
 ## Stil-Anmerkungen des Linters
 
 Der Style Checker überprüft, dass ihr euch an Grundregeln der Programmierung unter Java haltet bzw. gibt euch Tipps, wie ihr die Struktur eures Codes verbessern könnt.
-Der Schritt `Run Style Checker` sollte zum initialen Abgabetermin einen grünen Haken zeigen.
+Der Schritt `Run Reviewdog` sollte zum initialen Abgabetermin einen grünen Haken zeigen.
 Im _Pull Request_ mit dem Namen _Feedback_, könnt ihr oben den Reiter _Files changed_ auswählen.
 
 ![](images/feedback/step4.jpg)
