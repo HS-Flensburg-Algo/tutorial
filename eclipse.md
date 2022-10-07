@@ -168,13 +168,13 @@ In diesem Fall kann das folgende Vorgehen eventuell Abhilfe schaffen.
 
 Im Einstellungsfenster navigiert ihr zu dem Punkt `Installed JREs` unter `Java`.
 
-![Installed JREs Einstellungen](images/settings/runtime-environment/screen3.png)
+![Installed JREs Einstellungen](images/settings/runtime-environment/screen3.png){: .centered}
 
 
 Wählt die `jdk-19` aus und öffnet mit einem Klick auf `Edit...` das Fenster zum Bearbeiten.
 Im folgenden Fenster ändert ihr den Eintrag von `JRE name` auf `JavaSE-19`.
 
-![JRE Name anpassen](images/settings/runtime-environment/screen4.png)
+![JRE Name anpassen](images/settings/runtime-environment/screen4.png){: .centered}
 
 
 Bestätigt die Änderung mit `Finish` und verlasst die Einstellungen mit Klick auf `Apply and Close`.
