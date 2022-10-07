@@ -11,6 +11,9 @@ title: "Eclipse"
 
 4. [Einstellungen](#einstellungen)
 
+5. [Bekannte Probleme](#bekannte-probleme)
+
+
 <br/>
 
 ## Import eines Projektes
@@ -147,9 +150,13 @@ Dort ändert ihr die Einstellung `Tab policy` auf `Spaces only`.
 Die Einstellungen können nun verlassen werden, dabei nicht vergessen die Einstellungen mit einem Klick auf `Apply and Close` anzuwenden.
 
 
-### Nicht erkannte Standard Library
+## Bekannte Probleme
 
-Auf eigenen Geräten kann es beim Verwenden der JDK (Version 19) passieren, dass Eclipse euch im Projekt nach dem Import eine Menge Fehler meldet.
+### Verwendung von JDK19
+
+Auf eigenen Geräten kann es beim Verwenden des JDK (Version 19) passieren, dass Eclipse euch im Projekt nach dem Import eine Menge Fehler meldet.
+Insbesondere können Java-Standard-Pakete wie `java.util` nicht aufgelöst werden, sind also nicht bekannt.
+In diesem Fall kann das folgende Vorgehen eventuell Abhilfe schaffen.
 
 ![Beispiel vieler Fehler](images/settings/runtime-environment/screen1.png)
 
