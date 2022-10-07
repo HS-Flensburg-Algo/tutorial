@@ -145,3 +145,34 @@ Dort ändert ihr die Einstellung `Tab policy` auf `Spaces only`.
 
 
 Die Einstellungen können nun verlassen werden, dabei nicht vergessen die Einstellungen mit einem Klick auf `Apply and Close` anzuwenden.
+
+
+### Nicht erkannte Standard Library
+
+Auf eigenen Geräten kann es beim Verwenden der JDK (Version 19) passieren, dass Eclipse euch im Projekt nach dem Import eine Menge Fehler meldet.
+
+![Beispiel vieler Fehler](images/settings/runtime-environment/screen1.png)
+
+
+Über die Menüleiste unter `Window` den Menüpunkt `Preferences` auswählen.[^macos]
+
+![Einstellungen aufrufen](images/settings/runtime-environment/screen2.png)
+
+
+Im Einstellungsfenster navigiert ihr zu dem Punkt `Installed JREs` unter `Java`.
+
+![Installed JREs Einstellungen](images/settings/runtime-environment/screen3.png)
+
+
+Wählt die `jdk-19` aus und öffnet mit einem Klick auf `Edit...` das Fenster zum Bearbeiten.
+Im folgenden Fenster ändert ihr den Eintrag von `JRE name` auf `JavaSE-19`.
+
+![JRE Name anpassen](images/settings/runtime-environment/screen4.png)
+
+
+Bestätigt die Änderung mit `Finish` und verlasst die Einstellungen mit Klick auf `Apply and Close`.
+Im Package Explorer sollte jetzt ein Eintrag `JRE System Library [JavaSE-19]` zu finden sein.
+Falls die Fehler immer noch angezeigt werden, dann wählt über das Kontextmenü des Projekts (Rechtsklick)
+unter dem Punkt `Gradle` die Aktion `Refresh Gradle Project` oder versucht Eclipse neu zu starten `File -> Restart`
+
+![Gradle Projekt aktualisieren](images/settings/runtime-environment/screen5.png)
