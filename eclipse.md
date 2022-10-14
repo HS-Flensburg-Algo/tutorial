@@ -152,6 +152,15 @@ Die Einstellungen können nun verlassen werden, dabei nicht vergessen die Einste
 
 ## Bekannte Probleme
 
+### Verwendung von älteren JDK Versionen
+
+Bislang gab es Probleme mit der installierten JDK Version 16 in Eclipse, da die IDE versucht eine JDK Version 17 zu verwenden,
+die gar nicht installiert ist. Deshalb soll auf euren eigenen Geräten, sofern ihr diese benutzen wollt, mindestens die JDK Version 17 (LTS)
+oder neuer verwendet werden - zu einem bekannten Problem mit Version 19 folgen Informationen im nächsten Abschnitt. Um herauszufinden,
+welche Version derzeit installiert ist, könnt ihr in einer Konsole (z.B. `git bash`) den Befehl `javac --version` eintippen.
+<br><br>
+Benutzt bitte außerdem eine aktuelle Version von Eclipse.
+
 ### Verwendung von JDK19
 
 Auf eigenen Geräten kann es beim Verwenden des JDK (Version 19) passieren, dass Eclipse euch im Projekt nach dem Import eine Menge Fehler meldet.
