@@ -12,32 +12,20 @@ title: "Regeln"
 
 ## Bezeichner einer Regel
 
--bild-folgt-  
+![Bezeichner finden](images/feedback/linter/checks/check-name.png) 
 Die Stil-Anmerkungen des Linters beinhalten neben der kurzen Beschreibung auch Informationen darüber, in welcher Datei
 der Verstoß gefunden wurde, und vor allem, gegen welche Regel verstoßen wurde. Im Folgenden gibt es eine Auflistung der
 Regeln, die am häufigsten zu Verständnisproblemen geführt haben.
 
-## Erklärungen zu Auswahl an Regeln
+## Erklärungen zu Regeln
 
 ### VariableDeclarationUsageDistance
 
-#### offizielle Beschreibung aus Checkstyle
-
-Checks the distance between declaration of variable and its first usage. Note : Variable declaration/initialization
-statements are not counted while calculating length.
-
-#### Hintergrund
+überprüft den Abstand zwischen der Deklaration einer Variablen und ihrer ersten Verwendung.
+Notiz: Variablendeklarationen und -initialisierungen werden bei der Berechnung nicht mitgezählt.
 
 Der Geltungsbereich (engl.: scope) für Variablen sollte möglichst klein gewählt werden, um Nebeneffekte durch z.B.
 Methodenaufrufe auszuschließen, also letztlich sicherzustellen, dass der zugewiesene Wert sich nicht verändert bis zur
-Verwendung der Variablen. Eine Alternative ist es dabei, die Variable als `final` zu deklarieren, wenn ein größerer
-Abstand von Deklaration zu Verwendung vonnöten ist.
-
-#### final?
-
-`final` ist in Java ein Modifikator, der Einfluss auf die Änderungsmöglichkeiten eines Elements hat.
-Als `final` deklarierte Variablen (lokale als auch Instanz-) sind nach der Initialisierung nicht mehr änderbar.
-Weitere Elemente, die diesen Modifikator erhalten können, sind:
-- Klassen: Unterbindung der Ableitbarkeit der finalen Klassen
-- Methoden: können in abgeleiteten Klassen nicht überschrieben werden
-- Methodenparameter: analog zu Variablen, nach der Übergabe an Methode nicht mehr veränderbar
+Verwendung der Variablen. Eine Alternative ist es dabei, die Variable als `final`
+([siehe Skript](hs-flensburg-algo.github.io/basics.html)) zu deklarieren, wenn ein größerer Abstand von Deklaration zu
+Verwendung vonnöten ist.
