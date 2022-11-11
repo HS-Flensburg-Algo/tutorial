@@ -9,11 +9,13 @@ title: "Programmierregeln"
 
    1. [`AvoidLoopBreak`](#avoidloopbreak)
 
-   2. [`LocalTypeInference`](#localtypeinference)
+   2. [`FinalParameters`](#finalparameters)
 
-   3. [`ThisConsistency`](#thisconsistency)
+   3. [`LocalTypeInference`](#localtypeinference)
 
-   4. [`VariableDeclarationUsageDistance`](#variabledeclarationusagedistance)
+   4. [`ThisConsistency`](#thisconsistency)
+
+   5. [`VariableDeclarationUsageDistance`](#variabledeclarationusagedistance)
 
 
 <br/>
@@ -34,7 +36,7 @@ Viele dieser Regeln sorgen aber dafür, dass die Programme eine einfachere Struk
 Am Ende sollen die Regeln auch dafür sorgen, dass Programmierer*innen sich bewusst werden, dass es verschiedene Möglichkeiten gibt, ein Programm zu schreiben und man beim Programmieren reflektieren sollte, welche der Möglichkeiten am besten geeignet ist, um ein gut lesbares und wartbares Programm zu schreiben.
 Grundsätzlich sollte man immer Konsistenz anstreben.
 Das heißt, wenn es zweimal eine ähnliche Methode gibt, sollten diese auch ähnlich implementiert sein.
-Wenn man dagegen bei einer der Methoden eine andere Implementierung wählt, erwarten Lesende, dass dieser Unterschied einen inhaltichen Grund hat.
+Wenn man dagegen bei einer der Methoden eine andere Implementierung wählt, erwarten Lesende, dass dieser Unterschied einen inhaltlichen Grund hat.
 
 
 ### `AvoidLoopBreak`
@@ -87,7 +89,7 @@ Nehmen wir zum Beispiel einmal an, wir wollen ein Refactoring durchführen und d
 In der Variante `contains2` reicht es aus, die Zeile `return found` durch `return !found` zu ersetzen.
 Bei der Variante `contains1` reicht es aber keineswegs aus, die Zeile `return false` durch `return true` zu ersetzen, wie man in einer komplexen Methode vielleicht erwarten würde.
 
-Um die Variante mit `break` zu implemetieren, benötigt man eine zusätzliche boolesche Variable, die das Ergebnis der Schleife an die Anweisung nach der Schleife weiterreicht.
+Um die Variante mit `break` zu implementieren, benötigt man eine zusätzliche boolesche Variable, die das Ergebnis der Schleife an die Anweisung nach der Schleife weiterreicht.
 Da wir diese Variable in der verbesserten Variante auf jeden Fall benötigen, können wir auch gleich die folgende Implementierung nutzen.
 
 ```java
@@ -123,6 +125,27 @@ static boolean contains4(int[] array, int v) {
 
 Hier wird die Abbruchbedingung der Schleife gar nicht mehr im Schleifenkopf definiert sondern lediglich im Code des Rumpfes.
 Bei dieser Variante muss man bei komplexeren Methode ggf. viel Code danach überprüfen, ob ein `return` verwendet wird, um den restlichen Code zu verstehen.
+
+
+### `FinalParameters`
+
+Diese Regel prüft, dass Parameter von Methoden und Konstruktoren als [`final`](http://hs-flensburg-algo.github.io/basics.html#final) deklariert sind.
+Grundsätzlich können die Parameter von Methoden in Java verändert werden.
+Das heißt, wir können zum Beispiel die folgende Methode implementieren.
+
+```java
+static int method(int arg) {
+   arg = 23;
+   ...
+   return arg;
+}
+```
+
+Das Ändern des Parameters auf einen anderen Wert kann in der restlichen Methoden sehr verwirrend sein, da man normalerweise davon ausgeht, dass in der Variable `arg` das Argument steht, das beim Aufruf der Methode übergeben wird.
+Um das Verändern der Parameter zu verhindern, gibt es in einigen Java-Projekten die Konvention, dass alle Parameter als [`final`](http://hs-flensburg-algo.github.io/basics.html#final) deklariert werden müssen.
+Auf diese Weise erhalten wir einen Kompilierfehler, wenn wir versuchen eine Methode `method` zu verwenden.
+
+Diese Regel wird erst in einer späteren Laboraufgabe aktiviert, um zu Beginn des Semesters den Code nicht zu überfrachten.
 
 
 ### `LocalTypeInference`
