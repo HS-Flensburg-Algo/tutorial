@@ -10,3 +10,5 @@ Willkommen auf der offiziellen *Tutorial-Webseite* der Veranstaltung Algorithmen
 2. [Feedback](feedback.md)
 
 3. [Eclipse](eclipse.md)
+
+4. [Programmierregeln](rules.md)
