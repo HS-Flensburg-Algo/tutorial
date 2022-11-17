@@ -13,9 +13,11 @@ title: "Programmierregeln"
 
    3. [`LocalTypeInference`](#localtypeinference)
 
-   4. [`ThisConsistency`](#thisconsistency)
+   4. [`PreferExpressions`](#preferexpressions)
 
-   5. [`VariableDeclarationUsageDistance`](#variabledeclarationusagedistance)
+   5. [`ThisConsistency`](#thisconsistency)
+
+   6. [`VariableDeclarationUsageDistance`](#variabledeclarationusagedistance)
 
 
 <br/>
@@ -181,6 +183,33 @@ Die Sprache Java ist schlichtweg ein schlechtes Beispiel.
 In anderen statisch getypten Programmiersprachen sind durch das Konzept einer Typinferenz gar keine Typangaben notwendig.
 
 Um zu illustrieren, dass statisch getypte Sprachen gar nicht so viele Typangaben erfordern müssen, wird dieses Sprachfeature in der Vorlesung, wo möglich, verwendet.
+
+
+### `PreferExpressions`
+
+Bei der Programmierung in einer imperativen Programmiersprachen hat man häufig die Wahl zwischen einem Programmierstil, der eher anweisungsorientiert ist und einem Stil, der eher ausdrucksorientiert ist.
+Diese Regel soll dafür sorgen, dass in bestimmten Fällen der ausdrucksorientierte Stil verwendet wird.
+Wir betrachten dazu die folgende Java-Methode.
+
+```java
+static int addAndInc(int arg1, int arg2) {
+    int result = 0;
+    result = result + arg1;
+    result = result + arg2;
+    result++;
+    return result;
+}
+```
+
+Diese Methode addiert zwei Zahlen und erhöht das Ergebnis am Ende noch um `1`.
+Während diese Implementierung das gewünschte Ergebnis berechnet, ist sie durch die Verwendung von Anweisungen unnötig kompliziert.
+Die gleiche Methode kann durch die Verwendung von Ausdrücken auch wie folgt implementiert werden.
+
+```java
+static int addAndInc(int arg1, int arg2) {
+    return arg1 + arg2 + 1;
+}
+```
 
 
 ### `ThisConsistency`
