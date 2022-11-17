@@ -7,17 +7,19 @@ title: "Programmierregeln"
 
 2. [Regeln](#regeln)
 
-   1. [`AvoidLoopBreak`](#avoidloopbreak)
+    1. [`AvoidLoopBreak`](#avoidloopbreak)
 
-   2. [`FinalParameters`](#finalparameters)
+    2. [`FinalParameters`](#finalparameters)
 
-   3. [`LocalTypeInference`](#localtypeinference)
+    3. [`LocalTypeInference`](#localtypeinference)
 
-   4. [`PreferExpressions`](#preferexpressions)
+    4. [`PreferExpressions`](#preferexpressions)
 
-   5. [`ThisConsistency`](#thisconsistency)
+    5. [`ReduceScope`](#reducescope)
 
-   6. [`VariableDeclarationUsageDistance`](#variabledeclarationusagedistance)
+    6. [`ThisConsistency`](#thisconsistency)
+
+    7. [`VariableDeclarationUsageDistance`](#variabledeclarationusagedistance)
 
 
 <br/>
@@ -212,11 +214,37 @@ static int addAndInc(int arg1, int arg2) {
 ```
 
 
+### `ReduceScope`
+
+Mit dem englischen Begriff [_Scope_](https://hs-flensburg-algo.github.io/basics.html#sichtbarkeit-von-variablen) bezeichnet man den Bereich, in dem eine Variable sichtbar ist.
+In dem Bereich, in dem eine Variable sichtbar ist, kann sie grundsätzlich gelesen und geschrieben werden.
+Man sollte den Bereich, in dem eine Variable sichtbar ist, möglichst klein halten.
+Das verhindert, dass die Variable aus Versehen gelesen oder geschrieben wird.
+Daher sollte eine Variable erst in dem Block definiert werden, in dem sie auch verwendet wird.
+Wir betrachten zum Beispiel die folgende Methode.
+
+```java
+static void main(String[] args) {
+    int x = 1;
+    if (args.length < 1) {
+        ...
+    } else {
+        ...
+    }
+    ...
+}
+```
+
+Falls die Variable `x` hier nur in einem der Zweige der `if`-Anweisung verwendet wird, sollte die Variable auch in dem entsprechenden Zweig deklariert sein.
+Falls die Variable in der `if`-Anweisung gar nicht verwendet wird, sollte die Variable erst nach der `if`-Anweisung deklariert sein.
+In beiden Fällen verkleinern wir den Bereich, in dem die Variable sichtbar ist.
+
+
 ### `ThisConsistency`
 
 Diese Regel erzwingt, dass man das `this`-Schlüsselwort für alle Instanzvariablen verwendet oder für keine.
 Hierbei handelt es sich um ein Beispiel für konsistenten Code.
-Wenn `this` bei einer Instanzvariable verwendet wird, bei einer anderen aber nicht, erwarten Lesende, dass es einen inhaltichen Grund für diesen Unterschied gibt.
+Wenn `this` bei einer Instanzvariable verwendet wird, bei einer anderen aber nicht, erwarten Lesende, dass es einen inhaltlichen Grund für diesen Unterschied gibt.
 
 
 ### `VariableDeclarationUsageDistance`
@@ -224,6 +252,6 @@ Wenn `this` bei einer Instanzvariable verwendet wird, bei einer anderen aber nic
 Diese Regel überprüft den Abstand zwischen der Deklaration einer Variable und ihrer ersten Verwendung.
 Hinweis: Variablendeklarationen und -initialisierungen werden bei der Berechnung nicht mitgezählt.
 
-Der Geltungsbereich (engl.: scope) für Variablen sollte möglichst klein gewählt werden, um Nebeneffekte durch z.B. Methodenaufrufe auszuschließen, also letztlich sicherzustellen, dass der zugewiesene Wert sich nicht verändert bis zur Verwendung der Variable.
+Der Geltungsbereich (_Scope_) für Variablen sollte möglichst klein gewählt werden, um Nebeneffekte durch z.B. Methodenaufrufe auszuschließen, also letztlich sicherzustellen, dass der zugewiesene Wert sich nicht verändert bis zur Verwendung der Variable.
 Wenn es nicht möglich ist, den Abstand zwischen Deklaration und Verwendung zu verringern, kann eine Variable alternativ als [`final`](http://hs-flensburg-algo.github.io/basics.html#final) deklariert werden.
 Diese Deklaration verhindert ebenfalls, dass die Variable ungewollt verändert wird.
