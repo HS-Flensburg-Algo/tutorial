@@ -226,7 +226,7 @@ Wir betrachten zum Beispiel die folgende Methode.
 ```java
 static void main(String[] args) {
     int x = 1;
-    if (args.length < 1) {
+    if (args.length == 0) {
         ...
     } else {
         ...
@@ -238,6 +238,49 @@ static void main(String[] args) {
 Falls die Variable `x` hier nur in einem der Zweige der `if`-Anweisung verwendet wird, sollte die Variable auch in dem entsprechenden Zweig deklariert sein.
 Falls die Variable in der `if`-Anweisung gar nicht verwendet wird, sollte die Variable erst nach der `if`-Anweisung deklariert sein.
 In beiden Fällen verkleinern wir den Bereich, in dem die Variable sichtbar ist.
+
+In einer `if`-Anweisung, die ein `else if` nutzt, kann die Anmerkung etwas verwirrend sein.
+Wir betrachten einmal das folgende Beispiel.
+
+```java
+static void main(String[] args) {
+    int x = 1;
+    if (args.length == 0) {
+        ...
+    } else if (arg.length == 1) {
+        return x;
+    } else {
+        return x + 1;
+    }
+    ...
+}
+```
+
+Hier erhalten wir eine Anmerkung, dass wir den Scope von `x` reduzieren können, da die Variable `x` in den Fällen `arg.length == 1` und im `else`-Fall verwendet wird, die Variable wird im aber nicht im Fall `args.length == 0` verwendet.
+Es stellt sich bei diesem Beispiel allerdings die Frage, wie wir die Deklaration der Variable `x` nur in diesen Beispiel Fälle sichtbar machen.
+Um diese Anmerkung umzusetzen, muss man wissen, dass die `else if`-Konstruktion nur eine Kurzform von zwei geschachtelten `if`-Anweisungen ist.
+Wir können die obige Definition auch wie folgt definieren.
+
+```java
+static void main(String[] args) {
+    int x = 1;
+    if (args.length == 0) {
+        ...
+    } else {
+        if (arg.length == 1) {
+            return x;
+        } else {
+            return x + 1;
+        }
+    }
+    ...
+}
+```
+
+Das `else if` ist nur eine Kurzform, die es erlaubt, die Einrückung der zweiten `if`-Anweisung zu verhindern.
+In dieser Variante der Methode können wir jetzt einfach den Scope der Variable `x` verringern.
+Die Tatsache, dass die Variable `x` gar nicht in allen Fällen verwendet wird, ist auch ein Zeichen dafür, dass die drei Fälle gar nicht auf der gleichen Ebene sein sollten.
+Manchmal sind zwei geschachtelte `if`-Anweisungen sinnvoller, da sie ausdrücken, dass zwei Bedingungen überprüft werden, die unterschiedliche Eigenschaften erfüllen.
 
 
 ### `ThisConsistency`
