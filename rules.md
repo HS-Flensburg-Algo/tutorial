@@ -256,10 +256,10 @@ static void main(String[] args) {
 }
 ```
 
-Hier erhalten wir eine Anmerkung, dass wir den Scope von `x` reduzieren können, da die Variable `x` in den Fällen `arg.length == 1` und im `else`-Fall verwendet wird, die Variable wird im aber nicht im Fall `args.length == 0` verwendet.
-Es stellt sich bei diesem Beispiel allerdings die Frage, wie wir die Deklaration der Variable `x` nur in diesen Beispiel Fälle sichtbar machen.
+Hier erhalten wir eine Anmerkung, dass wir den Scope von `x` reduzieren können, da die Variable `x` in den Fällen `arg.length == 1` und im `else`-Fall verwendet wird, die Variable wird aber nicht im Fall `args.length == 0` verwendet.
+Es stellt sich bei diesem Beispiel allerdings die Frage, wie wir die Deklaration der Variable `x` nur in diesen beiden Fälle sichtbar machen.
 Um diese Anmerkung umzusetzen, muss man wissen, dass die `else if`-Konstruktion nur eine Kurzform von zwei geschachtelten `if`-Anweisungen ist.
-Wir können die obige Definition auch wie folgt definieren.
+Wir können die obige Methode auch wie folgt definieren.
 
 ```java
 static void main(String[] args) {
@@ -279,6 +279,7 @@ static void main(String[] args) {
 
 Das `else if` ist nur eine Kurzform, die es erlaubt, die Einrückung der zweiten `if`-Anweisung zu verhindern.
 In dieser Variante der Methode können wir jetzt einfach den Scope der Variable `x` verringern.
+
 Die Tatsache, dass die Variable `x` gar nicht in allen Fällen verwendet wird, ist auch ein Zeichen dafür, dass die drei Fälle gar nicht auf der gleichen Ebene sein sollten.
 Manchmal sind zwei geschachtelte `if`-Anweisungen sinnvoller, da sie ausdrücken, dass zwei Bedingungen überprüft werden, die unterschiedliche Eigenschaften erfüllen.
 
