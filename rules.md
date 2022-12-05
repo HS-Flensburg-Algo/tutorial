@@ -19,7 +19,9 @@ title: "Programmierregeln"
 
     6. [`ThisConsistency`](#thisconsistency)
 
-    7. [`VariableDeclarationUsageDistance`](#variabledeclarationusagedistance)
+    7. [`UseElse`](#useelse)
+
+    8. [`VariableDeclarationUsageDistance`](#variabledeclarationusagedistance)
 
 
 <br/>
@@ -289,6 +291,82 @@ Manchmal sind zwei geschachtelte `if`-Anweisungen sinnvoller, da sie ausdrücken
 Diese Regel erzwingt, dass man das `this`-Schlüsselwort für alle Instanzvariablen verwendet oder für keine.
 Hierbei handelt es sich um ein Beispiel für konsistenten Code.
 Wenn `this` bei einer Instanzvariable verwendet wird, bei einer anderen aber nicht, erwarten Lesende, dass es einen inhaltlichen Grund für diesen Unterschied gibt.
+
+
+### UseElse
+
+Diese Regel schlägt in zwei Fällen an.
+Im ersten Fall sorgt sie dafür, dass bei einer `if`-Anweisung ein `else` verwendet wird, wenn die `if`-Anweisung die Methode verlässt.
+Wir betrachten einmal das folgende Beispiel.
+
+```java
+static int min(int x, int y) {
+    if (x < y) {
+        return x;
+    }
+    return y;
+}
+```
+
+Wenn wir diesen Code betrachten, wissen wir, dass die Methode niemals den Code im `then`-Zweig der `if`-Anweisung (also `return x`) **und** den Code nach der `if`-Anweisung (also `return y`) ausführen wird.
+Stattdessen wir die Methode nur **entweder** den Code im `then`-Zweig der `if`-Anweisung (also `return x`) **oder** den Code nach der `if`-Anweisung (also `return y`) ausführen.
+Das heißt, wir konstruieren in diesem Beispiel zwei unabhängige Code-Pfade.
+Diese Information ist aber in der Definition der Methode sehr implizit.
+Bei komplexeren Methoden ist diese Tatsache sehr schnell schlecht zu erkennen.
+Mit diesem Umstand geht einher, dass wir nicht direkt sehen, dass im Code nach der `if`-Anweisung immer `x >= y` gilt.
+Man nennt Eigenschaften wie "in diesem Stück Code gilt immer `x >= y`" Invarianten und diese sind bei der Programmierung sehr wichtig.
+Diese Invariante ist für die Korrektheit des Codes, der nach der `if`-Anweisung folgt, unerlässlich.
+
+Daher sollte man bei Methoden, die im `then`-Zweig einer `if`-Anweisung die Methode verlassen, ein `else` nutzen.
+Das heißt, wir sollten die Methode `min` stattdessen wie folgt definieren.
+
+```java
+static int min(int x, int y) {
+    if (x < y) {
+        return x;
+    } else {
+        return y;
+    }
+}
+```
+
+Bei dieser Variante ist für den Leser sofort offensichtlich, dass die Methode zwei logische Pfade hat, die voneinander unabhängig sind.
+Wir sehen sofort, dass der Code entweder den einen Pfad oder den anderen Pfad nehmen wird.
+
+Diese Regel schlägt außerdem an, wenn nach einer `if`-Anweisung, welche die Methode verlässt, weitere Anweisungen folgen.
+Wir betrachten einmal das folgende Beispiel.
+
+```java
+static int min(int x, int y) {
+    int result;
+    if (x < y) {
+        return x;
+    } else {
+        result = y;
+    }
+    return result;
+}
+```
+
+In diesem Beispiel wird nun, wie von der Regel gewünscht, ein `else` verwendet, um die beiden Code-Pfade klar voneinander zu trennen.
+In diesem Beispiel werden nun allerdings nach der `if`-Anweisung weitere Anweisungen ausgeführt, in diesem Fall das `return result`.
+Falls die Bedingung `x < y` erfüllt ist, werden die Anweisungen nach der `if`-Anweisung, also hier `return result` nie ausgeführt.
+Daher sollten auf die `if`-Anweisung keine weiteren Anweisungen folgen.
+Stattdessen sollten wir den Code, der nach der `if`-Anweisung folgt, in den `else`-Zweig der `if`-Anweisung verschieben.
+Das heißt, wir erhalten die folgende Definition.
+
+
+```java
+static int min(int x, int y) {
+    int result;
+    if (x < y) {
+        return x;
+    } else {
+        result = y;
+        return result;
+    }
+}
+```
 
 
 ### `VariableDeclarationUsageDistance`
