@@ -368,6 +368,9 @@ static int min(int x, int y) {
 }
 ```
 
+Nach dieser Änderung des Codes können andere Regeln angewendet werden, um die Struktur weiter zu verbessern.
+Zum Beispiel wird die Variable `result` in diesem Beispiel jetzt nur noch im `else`-Zweig der `if`-Anweisung genutzt und sollte somit auch dort deklariert werden.
+
 
 ### `VariableDeclarationUsageDistance`
 
