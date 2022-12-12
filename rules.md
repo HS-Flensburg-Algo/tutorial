@@ -9,19 +9,21 @@ title: "Programmierregeln"
 
     1. [AvoidLoopBreak](#avoidloopbreak)
 
-    2. [FinalParameters](#finalparameters)
+    2. [DuplicateInConditionalCheck](#duplicateinconditionalcheck)
 
-    3. [LocalTypeInference](#localtypeinference)
+    3. [FinalParameters](#finalparameters)
 
-    4. [PreferExpressions](#preferexpressions)
+    4. [LocalTypeInference](#localtypeinference)
 
-    5. [ReduceScope](#reducescope)
+    5. [PreferExpressions](#preferexpressions)
 
-    6. [ThisConsistency](#thisconsistency)
+    6. [ReduceScope](#reducescope)
 
-    7. [UseElse](#useelse)
+    7. [ThisConsistency](#thisconsistency)
 
-    8. [VariableDeclarationUsageDistance](#variabledeclarationusagedistance)
+    8. [UseElse](#useelse)
+
+    9. [VariableDeclarationUsageDistance](#variabledeclarationusagedistance)
 
 
 <br/>
@@ -131,6 +133,101 @@ static boolean contains4(int[] array, int v) {
 
 Hier wird die Abbruchbedingung der Schleife gar nicht mehr im Schleifenkopf definiert sondern lediglich im Code des Rumpfes.
 Bei dieser Variante muss man bei komplexeren Methode ggf. viel Code danach überprüfen, ob ein `return` verwendet wird, um den restlichen Code zu verstehen.
+
+
+### DuplicateInConditionalCheck
+
+Wir betrachten die folgende Methode, die testet, ob eine Zahl gerade ist.
+
+```java
+static boolean even(int i) {
+    boolean result;
+    if (i % 2 == 0) {
+        result = true;
+        return result;
+    } else {
+        result = false;
+        return result;
+    }
+}
+```
+
+In beiden Zweigen der `if`-Anweisung wird am Ende der gleiche Code ausgeführt, nämlich `return result`.
+Das heißt, unabhängig davon, ob `i % 2 == 0` ist oder nicht, führt unsere Methode die gleiche Anweisung aus.
+In diesem Fall können wir die Anweisung auch nach der `if`-Anweisung durchführen.
+Das heißt, statt die Anweisung `return result` in beiden Zweigen der `if`-Anweisung durchzuführen, führen wir die Anweisung einmal durch nachdem die `if`-Anweisung beendet ist.
+Wir erhalten damit die folgende Definition.
+
+```java
+static boolean even(int i) {
+    boolean result;
+    if (i % 2 == 0) {
+        result = true;
+    } else {
+        result = false;
+    }
+    return result;
+}
+```
+
+Die gleiche Anmerkung kann auch auftreten, bei einem `else if` auftreten.
+Wir betrachten die folgende Methode. 
+
+```java
+static int signum(int i) {
+    boolean result;
+    if (i == 0) {
+        return 0;
+    } else if (i < 0) {
+        result = -1;
+        return result;
+    } else {
+        result = 1;
+        return result;
+    }
+}
+```
+
+Für diese Methode erhalten wir die Anmerkung, dass die letzte Anweisung der Zweige der `if`-Anweisung gleich sind.
+An dieser Stelle wird in beiden Zweigen die Anweisung `return result` durchgeführt.
+Wir können hier aber nicht ohne weiteres die Anweisung aus der `if`-Anweisung ziehen, da es noch einen dritten Fall gibt.
+Um bei diesem Beispiel eine Umformung vorzunehmen, müssen wir das `else if` zuerst in zwei geschachtelte `if`-Anweisungen umformen.
+Wir erhalten dadurch die folgende Definition.
+
+```java
+static int signum(int i) {
+    boolean result;
+    if (i == 0) {
+        return 0;
+    } else {
+        if (i < 0) {
+            result = -1;
+            return result;
+        } else {
+            result = 1;
+            return result;
+        }
+    }
+}
+```
+
+In dieser Variante können wir nun die Anweisung `return result` aus der inneren `if`-Anweisung herausziehen und erhalten die folgende Definition.
+
+```java
+static int signum(int i) {
+    boolean result;
+    if (i == 0) {
+        return 0;
+    } else {
+        if (i < 0) {
+            result = -1;
+        } else {
+            result = 1;
+        }
+        return result;
+    }
+}
+```
 
 
 ### FinalParameters
