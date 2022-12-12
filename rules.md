@@ -7,21 +7,21 @@ title: "Programmierregeln"
 
 2. [Regeln](#regeln)
 
-    1. [`AvoidLoopBreak`](#avoidloopbreak)
+    1. [AvoidLoopBreak](#avoidloopbreak)
 
-    2. [`FinalParameters`](#finalparameters)
+    2. [FinalParameters](#finalparameters)
 
-    3. [`LocalTypeInference`](#localtypeinference)
+    3. [LocalTypeInference](#localtypeinference)
 
-    4. [`PreferExpressions`](#preferexpressions)
+    4. [PreferExpressions](#preferexpressions)
 
-    5. [`ReduceScope`](#reducescope)
+    5. [ReduceScope](#reducescope)
 
-    6. [`ThisConsistency`](#thisconsistency)
+    6. [ThisConsistency](#thisconsistency)
 
-    7. [`UseElse`](#useelse)
+    7. [UseElse](#useelse)
 
-    8. [`VariableDeclarationUsageDistance`](#variabledeclarationusagedistance)
+    8. [VariableDeclarationUsageDistance](#variabledeclarationusagedistance)
 
 
 <br/>
@@ -45,7 +45,7 @@ Das heißt, wenn es zweimal eine ähnliche Methode gibt, sollten diese auch ähn
 Wenn man dagegen bei einer der Methoden eine andere Implementierung wählt, erwarten Lesende, dass dieser Unterschied einen inhaltlichen Grund hat.
 
 
-### `AvoidLoopBreak`
+### AvoidLoopBreak
 
 Diese Regel verbietet die Verwendung von `return` und `break` zum Beenden einer Schleife.
 Hier soll kurz dargestellt werden, warum diese Konstrukte verboten werden.
@@ -133,7 +133,7 @@ Hier wird die Abbruchbedingung der Schleife gar nicht mehr im Schleifenkopf defi
 Bei dieser Variante muss man bei komplexeren Methode ggf. viel Code danach überprüfen, ob ein `return` verwendet wird, um den restlichen Code zu verstehen.
 
 
-### `FinalParameters`
+### FinalParameters
 
 Diese Regel prüft, dass Parameter von Methoden und Konstruktoren als [`final`](http://hs-flensburg-algo.github.io/basics.html#final) deklariert sind.
 Grundsätzlich können die Parameter von Methoden in Java verändert werden.
@@ -154,7 +154,7 @@ Auf diese Weise erhalten wir einen Kompilierfehler, wenn wir versuchen eine Meth
 Diese Regel wird erst in einer späteren Laboraufgabe aktiviert, um zu Beginn des Semesters den Code nicht zu überfrachten.
 
 
-### `LocalTypeInference`
+### LocalTypeInference
 
 Java stellt seit Version 10 eine lokale Typinferenz zur Verfügung.
 Statt eine Zeile der Form
@@ -189,7 +189,7 @@ In anderen statisch getypten Programmiersprachen sind durch das Konzept einer Ty
 Um zu illustrieren, dass statisch getypte Sprachen gar nicht so viele Typangaben erfordern müssen, wird dieses Sprachfeature in der Vorlesung, wo möglich, verwendet.
 
 
-### `PreferExpressions`
+### PreferExpressions
 
 Bei der Programmierung in einer imperativen Programmiersprachen hat man häufig die Wahl zwischen einem Programmierstil, der eher anweisungsorientiert ist und einem Stil, der eher ausdrucksorientiert ist.
 Diese Regel soll dafür sorgen, dass in bestimmten Fällen der ausdrucksorientierte Stil verwendet wird.
@@ -216,7 +216,7 @@ static int addAndInc(int arg1, int arg2) {
 ```
 
 
-### `ReduceScope`
+### ReduceScope
 
 Mit dem englischen Begriff [_Scope_](https://hs-flensburg-algo.github.io/basics.html#sichtbarkeit-von-variablen) bezeichnet man den Bereich, in dem eine Variable sichtbar ist.
 In dem Bereich, in dem eine Variable sichtbar ist, kann sie grundsätzlich gelesen und geschrieben werden.
@@ -286,7 +286,7 @@ Die Tatsache, dass die Variable `x` gar nicht in allen Fällen verwendet wird, i
 Manchmal sind zwei geschachtelte `if`-Anweisungen sinnvoller, da sie ausdrücken, dass zwei Bedingungen überprüft werden, die unterschiedliche Eigenschaften erfüllen.
 
 
-### `ThisConsistency`
+### ThisConsistency
 
 Diese Regel erzwingt, dass man das `this`-Schlüsselwort für alle Instanzvariablen verwendet oder für keine.
 Hierbei handelt es sich um ein Beispiel für konsistenten Code.
@@ -372,7 +372,7 @@ Nach dieser Änderung des Codes können andere Regeln angewendet werden, um die 
 Zum Beispiel wird die Variable `result` in diesem Beispiel jetzt nur noch im `else`-Zweig der `if`-Anweisung genutzt und sollte somit auch dort deklariert werden.
 
 
-### `VariableDeclarationUsageDistance`
+### VariableDeclarationUsageDistance
 
 Diese Regel überprüft den Abstand zwischen der Deklaration einer Variable und ihrer ersten Verwendung.
 Hinweis: Variablendeklarationen und -initialisierungen werden bei der Berechnung nicht mitgezählt.
