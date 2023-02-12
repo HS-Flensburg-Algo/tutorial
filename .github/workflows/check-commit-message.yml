@@ -7,7 +7,7 @@ jobs:
   check-commit-message-style:
 
     name: Check commit message style
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
 
