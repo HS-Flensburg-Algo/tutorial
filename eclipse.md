@@ -147,6 +147,13 @@ Dort ändert ihr die Einstellung `Tab policy` auf `Spaces only`.
 ![Tab policy konfigurieren](images/settings/formatter/screen6.png)
 
 
+Damit die Formatierung automatisch umgesetzt wird, kann zusätzlich noch das Formatieren beim Speichern aktiviert werden.
+Dazu navigiert ihr unter `Java` zu `Editor` und zu `Save Actions`.
+
+Hier setzt ihr den Haken bei `Perform the selected Actions on save` und `Format source code`.
+
+![Formatieren beim Speichern aktivieren](images/settings/formatter/screen7.png)
+
 Die Einstellungen können nun verlassen werden, dabei nicht vergessen die Einstellungen mit einem Klick auf `Apply and Close` anzuwenden.
 
 
